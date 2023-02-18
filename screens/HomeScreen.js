@@ -7,14 +7,9 @@ import {
 } from "react-native";
 import React, { useLayoutEffect } from "react";
 import { useNavigation } from "@react-navigation/native";
-import {
-	SafeAreaView,
-	SafeAreaProvider,
-	SafeAreaInsetsContext,
-	useSafeAreaInsets,
-	initialWindowMetrics,
-} from "react-native-safe-area-context";
-import { HeroImage, Sparkle, Background, Background2 } from "../assets";
+import { SafeAreaView } from "react-native-safe-area-context";
+import { Background2, Discover } from "../assets";
+import * as Animatable from "react-native-animatable";
 
 const HomeScreen = () => {
 	const navigation = useNavigation();
@@ -31,35 +26,27 @@ const HomeScreen = () => {
 			className="flex-1 justify-center"
 			resizeMode="cover"
 		>
-			<SafeAreaView className="flex-1 ">
-				{/* First Section */}
+			<SafeAreaView className="flex-1">
+				<View className="relative items-center top-5">
+					<Animatable.Image
+						animation="fadeInDown"
+						easing="ease-in-out"
+						duration={1000}
+						source={Discover}
+						className="h-3/4 w-full object-contain"
+					/>
 
-				<View className="flex-row px-6 mt-8 items-center space-x-2">
-					<View>
-						<Text className="text-gray-700 text-2xl font-semibold ">
-							astrid. go
+					<View className="px-6 bottom-20 -top-45">
+						<Text className="text-gray-700 font-bold text-[28px]">
+							discover your new favourite places{" "}
+						</Text>
+
+						<Text className="text-gray-600 top-5 text-base">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu
+							nisl velit. Sed eu nisl velit. Sed eu nisl velit. Sed eu nisl
+							velit.
 						</Text>
 					</View>
-				</View>
-
-				{/* Second Section */}
-
-				<View className="relative top-10 items-center">
-					<Image
-						source={HeroImage}
-						className="w-3/4 h-2/3 object-cover rounded-2xl"
-					/>
-				</View>
-
-				<View className="px-6 bottom-20">
-					<Text className="text-gray-700 font-bold text-[28px]">
-						discover your new favourite places{" "}
-					</Text>
-
-					<Text className="text-gray-600 top-5 text-base">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu nisl
-						velit. Sed eu nisl velit. Sed eu nisl velit. Sed eu nisl velit.
-					</Text>
 				</View>
 
 				{/* Third Section */}
@@ -71,13 +58,17 @@ const HomeScreen = () => {
 
 				<View className="relative justify-center items-center">
 					{/* Go Button */}
-					<View className="absolute w-3/4 h-24 pt-10 border-yellow-500 rounded-full items-center justify-center">
+					<View className="absolute w-3/4 h-24 pt-10 rounded-full items-center justify-center">
 						<TouchableOpacity className="w-full">
-							<View className="items-center h-full justify-center rounded-2xl bg-yellow-500">
-								<Text className="text-gray-700 text-3xl font-semibold opacity-2">
-									start{" "}
-								</Text>
-							</View>
+							<Animatable.View
+								animation={"pulse"}
+								easing="ease-in-out"
+								duration={3000}
+								iterationCount="infinite"
+								className="items-center h-full justify-center rounded-2xl opacity-50 bg-gray-50 bottom-10 "
+							>
+								<Text className="text-gray-900 text-2xl font-bold">start </Text>
+							</Animatable.View>
 						</TouchableOpacity>
 					</View>
 				</View>
