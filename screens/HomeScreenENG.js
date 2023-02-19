@@ -61,7 +61,7 @@ const HomeScreen = () => {
 					<View className="absolute w-3/4 h-24 pt-10 rounded-full items-center justify-center">
 						<TouchableOpacity
 							className="w-full"
-							onPress={() => navigation.navigate("Discover")}
+							onPress={() => navigation.navigate("DiscoverENG")}
 						>
 							<Animatable.View
 								animation={"pulse"}
@@ -76,7 +76,7 @@ const HomeScreen = () => {
 					</View>
 				</View>
 				<TouchableOpacity onPress={() => navigation.navigate("Language")}>
-					<View className="flex-row px-8 top-5  rounded-2xl opacity-50 bg-gray-50">
+					<View className="flex-row px-8 top-5 rounded-2xl opacity-50 bg-gray-50">
 						<Text>Language</Text>
 					</View>
 				</TouchableOpacity>

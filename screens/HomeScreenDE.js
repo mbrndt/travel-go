@@ -49,26 +49,19 @@ const HomeScreenDE = () => {
 					</View>
 				</View>
 
-				{/* Third Section */}
-
-				{/* <View className="w-[300px] h-[300px] bg-slate-400 rounded-full absolute bottom-10 -right-36"></View> */}
-				{/* <View className="w-[300px] h-[300px] bg-amber-700 rounded-full absolute -bottom-28 -left-36"></View>   */}
-
-				{/* Image Section */}
-
-				<View className="relative justify-center items-center">
+				<View className="relative justify-center items-center bottom-20">
 					{/* Go Button */}
 					<View className="absolute w-3/4 h-24 pt-10 rounded-full items-center justify-center">
 						<TouchableOpacity
 							className="w-full"
-							onPress={() => navigation.navigate("Discover")}
+							onPress={() => navigation.navigate("DiscoverDE")}
 						>
 							<Animatable.View
 								animation={"pulse"}
 								easing="ease-in-out"
 								duration={3000}
 								iterationCount="infinite"
-								className="items-center h-full -top-40 justify-center rounded-2xl opacity-50 bg-gray-50 bottom-10 "
+								className="items-center h-full justify-center rounded-2xl opacity-50 bg-gray-50 bottom-10 "
 							>
 								<Text className="text-gray-900 text-2xl font-bold">start </Text>
 							</Animatable.View>

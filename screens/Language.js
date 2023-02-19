@@ -4,8 +4,9 @@ import {
 	ImageBackground,
 	Touchable,
 	TouchableOpacity,
+	Image,
 } from "react-native";
-import { Background } from "../assets";
+import { Background, astridDiscovery } from "../assets";
 import React, { useLayoutEffect } from "react";
 import { useNavigation } from "@react-navigation/native";
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -20,6 +21,10 @@ const Language = () => {
 			resizeMode="stretch"
 		>
 			<SafeAreaView className="flex-1">
+				<Image
+					source={astridDiscovery}
+					className="w-full h-full absolute z-2"
+				/>
 				<View className="flex-row items-center justify-between px-8 top-5">
 					<View>
 						<Text className="text-3xl text-gray-700 font-bold shadow-lg">
@@ -27,8 +32,8 @@ const Language = () => {
 						</Text>
 					</View>
 				</View>
-				<View className="flex-column items-center justify-between px-8 flex-1 py-40">
-					<TouchableOpacity onPress={() => navigation.navigate("Home")}>
+				<View className="flex-column items-center justify-between px-8 flex-1 py-40 bottom-10 ">
+					<TouchableOpacity onPress={() => navigation.navigate("HomeENG")}>
 						<Text className="text-3xl text-gray-700 font-bold shadow-lg">
 							English
 						</Text>
@@ -45,9 +50,6 @@ const Language = () => {
 					</TouchableOpacity>
 				</View>
 			</SafeAreaView>
-			<Text className="text text-gray-700 font-bold shadow-lg px-4 py-4">
-				ästrid. Discovery
-			</Text>
 		</ImageBackground>
 	);
 };

@@ -8,3 +8,4 @@ export { default as Background4 } from "./background4.jpg";
 export { default as ProfileIcon } from "./profileIcon.png";
 export { default as Entdecke } from "./Entdecke.png";
 export { default as EntdeckeKOR } from "./EntdeckeKOR.png";
+export { default as astridDiscovery } from "./astridDiscovery.png";

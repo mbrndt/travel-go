@@ -55,19 +55,19 @@ const HomeScreenKOR = () => {
 
 				{/* Image Section */}
 
-				<View className="relative justify-center items-center">
+				<View className="relative justify-center items-center bottom-20">
 					{/* Go Button */}
 					<View className="absolute w-3/4 h-24 pt-10 rounded-full items-center justify-center">
 						<TouchableOpacity
 							className="w-full"
-							onPress={() => navigation.navigate("Discover")}
+							onPress={() => navigation.navigate("DiscoverKOR")}
 						>
 							<Animatable.View
 								animation={"pulse"}
 								easing="ease-in-out"
 								duration={3000}
 								iterationCount="infinite"
-								className="items-center h-full -top-40 justify-center rounded-2xl opacity-50 bg-gray-50 bottom-10 "
+								className="items-center h-full justify-center rounded-2xl opacity-50 bg-gray-50 bottom-10 "
 							>
 								<Text className="text-gray-900 text-2xl font-bold">start </Text>
 							</Animatable.View>
