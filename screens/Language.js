@@ -1,28 +1,18 @@
-import { View, Text, ImageBackground } from "react-native";
+import {
+	View,
+	Text,
+	ImageBackground,
+	Touchable,
+	TouchableOpacity,
+} from "react-native";
 import { Background } from "../assets";
 import React, { useLayoutEffect } from "react";
 import { useNavigation } from "@react-navigation/native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { useFonts } from "expo-font";
-import AppLoading from "expo-app-loading";
 
 const Language = () => {
-	let [fontsLoaded] = useFonts({
-		"Corben-Bold": require("../assets/fonts/Corben-Bold.ttf"),
-		"Corben-Regular": require("../assets/fonts/Corben-Regular.ttf"),
-	});
-
-	if (!fontsLoaded) {
-		return <AppLoading />;
-	}
-
 	const navigation = useNavigation();
 
-	useLayoutEffect(() => {
-		navigation.setOptions({
-			headerShown: false,
-		});
-	}, []);
 	return (
 		<ImageBackground
 			source={Background}
@@ -38,27 +28,24 @@ const Language = () => {
 					</View>
 				</View>
 				<View className="flex-column items-center justify-between px-8 flex-1 py-40">
-					<View>
+					<TouchableOpacity onPress={() => navigation.navigate("Home")}>
 						<Text className="text-3xl text-gray-700 font-bold shadow-lg">
 							English
 						</Text>
-					</View>
-					<View>
+					</TouchableOpacity>
+					<TouchableOpacity onPress={() => navigation.navigate("HomeDE")}>
 						<Text className="text-3xl text-gray-700 font-bold shadow-lg">
 							Deutsch
 						</Text>
-					</View>
-					<View>
+					</TouchableOpacity>
+					<TouchableOpacity onPress={() => navigation.navigate("HomeKOR")}>
 						<Text className="text-3xl text-gray-700 font-bold shadow-lg">
 							한국어
 						</Text>
-					</View>
+					</TouchableOpacity>
 				</View>
 			</SafeAreaView>
-			<Text
-				className="text text-gray-700 font-bold shadow-lg px-4 py-4"
-				style={{ fontFamily: "Corben-Bold" }}
-			>
+			<Text className="text text-gray-700 font-bold shadow-lg px-4 py-4">
 				ästrid. Discovery
 			</Text>
 		</ImageBackground>
