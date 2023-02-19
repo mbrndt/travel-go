@@ -3,3 +3,6 @@ export { default as Sparkle } from "./icon.png";
 export { default as Background } from "./background.png";
 export { default as Background2 } from "./background.jpg";
 export { default as Discover } from "./Discover.png";
+export { default as Background3 } from "./background3.jpg";
+export { default as Background4 } from "./background4.jpg";
+export { default as ProfileIcon } from "./profileIcon.png";

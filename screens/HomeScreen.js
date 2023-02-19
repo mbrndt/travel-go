@@ -31,7 +31,7 @@ const HomeScreen = () => {
 					<Animatable.Image
 						animation="fadeInDown"
 						easing="ease-in-out"
-						duration={1000}
+						duration={3000}
 						source={Discover}
 						className="h-3/4 w-full object-contain"
 					/>
@@ -59,7 +59,10 @@ const HomeScreen = () => {
 				<View className="relative justify-center items-center">
 					{/* Go Button */}
 					<View className="absolute w-3/4 h-24 pt-10 rounded-full items-center justify-center">
-						<TouchableOpacity className="w-full">
+						<TouchableOpacity
+							className="w-full"
+							onPress={() => navigation.navigate("Discover")}
+						>
 							<Animatable.View
 								animation={"pulse"}
 								easing="ease-in-out"
@@ -72,6 +75,11 @@ const HomeScreen = () => {
 						</TouchableOpacity>
 					</View>
 				</View>
+				<TouchableOpacity onPress={() => navigation.navigate("Language")}>
+					<View className="flex-row px-8 top-5  rounded-2xl opacity-50 bg-gray-50">
+						<Text>Language</Text>
+					</View>
+				</TouchableOpacity>
 			</SafeAreaView>
 		</ImageBackground>
 	);
